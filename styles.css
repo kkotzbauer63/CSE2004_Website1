@@ -7,7 +7,7 @@
 
 /* Global Styles */
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
     font-weight: 400;
     color: #1a1a1a;
     background: linear-gradient(#d4e8ed, #ffffff);
@@ -103,7 +103,6 @@ section {
     margin-bottom: 4rem;
 }
 
-/* Content Wrapper with Flexbox */
 .content-wrapper {
     display: flex;
     gap: 3rem;
@@ -501,7 +500,18 @@ footer a:hover {
     .content-wrapper,
     .content-wrapper.reverse {
         flex-direction: column;
-        padding: 2rem;
+        padding: 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .graph-container {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .text-content {
+        min-width: 0;
+        width: 100%;
     }
 
     .text-content p {
@@ -511,10 +521,18 @@ footer a:hover {
     /* EQ section */
     .eq-content {
         flex-direction: column;
+        gap: 1.5rem;
     }
 
     .eq-graphs {
-        min-width: 100%;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .eq-info {
+        min-width: 0;
+        width: 100%;
+        padding: 1.25rem;
     }
 
     .eq-section h2 {
