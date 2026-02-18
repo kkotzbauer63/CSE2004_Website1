@@ -60,7 +60,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -418,25 +418,25 @@ tbody td:first-child {
     color: #1a1a1a;
 }
 
-.resources-section ol {
+.resources-section ul {
     padding-left: 2rem;
 }
 
-.resources-section ol ul {
+.resources-section ul li {
     margin-bottom: 1rem;
     line-height: 1.7;
     font-size: 1.05rem;
     color: #1a1a1a;
 }
 
-.resources-section ol ul a {
+.resources-section ul li a {
     color: #3a5a7e;
     font-weight: 600;
     text-decoration: underline;
     transition: color 0.2s ease;
 }
 
-.resources-section ol ul a:visited {
+.resources-section ul li a:visited {
     color: #0b1977;
 }
 
