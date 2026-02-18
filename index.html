@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Headphone Equalization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#frequency-response">Frequency Response</a></li>
+            <li><a href="#equalization">Equalization</a></li>
+            <li><a href="#data-table">Technical Data</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="header-image">
+            <img src="Headphones.png" alt="Headphones drawing">
+        </div>
+        <div class="header-content">
+            <h1>UNDERSTANDING HEADPHONE EQUALIZATION</h1>
+            <p class="tagline">A Guide to Better Sound</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section id="introduction" class="intro-section">
+            <div class="content-wrapper">
+                <div class="graph-container">
+                    <img src="/raw_sonys_graph.png" alt="Raw frq of Sony WH1000-XM5">
+                </div>
+                <div class="text-content">
+                    <p>
+                        Sound from headphones is not always the same! Each headphone produces different
+                        frequencies (pitches) at different volumes (sound level). This change in volume over
+                        frequency is called the frequency response, and colors the sound signature of the headphone.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frequency Response Section -->
+        <section id="frequency-response" class="frq-section">
+            <div class="content-wrapper reverse">
+                <div class="graph-container">
+                    <img src="/target_curve_graph.png" alt="Average headphone preference graph with error bounds">
+                </div>
+                <div class="text-content">
+                    <p>
+                        Tuning headphones is not straight forward! Natural preference for a headphone varies
+                        depending on ear shape, sensitivity to high pitched sounds, and love for bass.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equalization Detailed Section -->
+        <section id="equalization" class="eq-section">
+            <h2>Parametric Equalization Filters</h2>
+
+            <article class="eq-content">
+                <div class="eq-graphs">
+                    <div class="graph-container large">
+                        <img src="/peq_graph.png" alt="10 Parametric EQ filters for Sony WH1000-XM5">
+                    </div>
+                    <div class="graph-container large">
+                        <img src="/before_combined_graph.png"
+                            alt="Comparison of raw frequency response versus corrected response for Sony WH1000-XM5">
+                    </div>
+                </div>
+
+                <aside class="eq-info">
+                    <h3>How Equalization Works</h3>
+                    <p>
+                        Equalization allows you to adjust specific frequency ranges to match your
+                        preferred sound signature. By applying parametric filters, you can boost
+                        or cut particular frequencies to compensate for headphone characteristics.
+                    </p>
+
+                    <h3>Key Concepts</h3>
+                    <ul>
+                        <li><strong>Frequency Response:</strong> How loud different pitches sound</li>
+                        <li><strong>Parametric EQ:</strong> Precise control over frequency, gain, and bandwidth</li>
+                        <li><strong>Target Curve:</strong> The ideal frequency response for neutral sound. This can
+                            also be customized to your preference</li>
+
+                    </ul>
+                    <br>
+                    <p>
+                        As seen in the graph to the left, the raw frequency response of the Sony's have been
+                        adjusted to match the black target curve by adding the parametric filters to the raw
+                        frequency response.
+                    </p>
+                </aside>
+            </article>
+        </section>
+
+        <!-- Data Table Section -->
+        <section id="data-table" class="table-section">
+            <h2>EQ Filter Settings - Sony WH1000-XM5</h2>
+            <p>Below are the recommended parametric EQ settings to achieve optimal sound quality with the Sony
+                WH1000-XM5 headphones. <strong>Preamp: -4.2 dB</strong></p>
+
+            <button id="toggleTableBtn" class="toggle-btn">Show EQ Table</button>
+
+            <table id="eqTable" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Filter #</th>
+                        <th>Filter Type</th>
+                        <th>Frequency (Hz)</th>
+                        <th>Gain (dB)</th>
+                        <th>Q Factor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Low Shelf</td>
+                        <td>105</td>
+                        <td>-3.7</td>
+                        <td>0.70</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Peaking</td>
+                        <td>161</td>
+                        <td>-5.0</td>
+                        <td>0.72</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Peaking</td>
+                        <td>1148</td>
+                        <td>+5.1</td>
+                        <td>0.61</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Peaking</td>
+                        <td>1663</td>
+                        <td>-4.2</td>
+                        <td>3.28</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Peaking</td>
+                        <td>69</td>
+                        <td>+2.2</td>
+                        <td>1.46</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>High Shelf</td>
+                        <td>10000</td>
+                        <td>+4.1</td>
+                        <td>0.70</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Peaking</td>
+                        <td>3750</td>
+                        <td>-1.8</td>
+                        <td>1.96</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Peaking</td>
+                        <td>2540</td>
+                        <td>+3.0</td>
+                        <td>4.45</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Peaking</td>
+                        <td>2026</td>
+                        <td>-1.1</td>
+                        <td>5.14</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Peaking</td>
+                        <td>882</td>
+                        <td>-0.5</td>
+                        <td>5.11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Additional Resources -->
+        <section class="resources-section">
+            <h2>Additional Resources</h2>
+            <p>Explore these external resources to deepen your understanding of audio equalization:</p>
+
+            <ol>
+                <ul><a href="https://graph.hangout.audio/headphones/"> Hangout.Audio EQ Tool</a> -
+                    Online EQ tool to create your own equalization filters for thousands of headphones</ul>
+                <ul><a href="https://crinacle.com/"> Crinacle's IEM Rankings</a> - In-ear
+                    monitor measurements and rankings</ul>
+                <ul><a href="https://www.reddit.com/r/headphones/"> r/headphones
+                        Community</a> - Active Reddit community to discuss and ask questions about audio equipment and
+                    EQ settings</ul>
+            </ol>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="contact-section">
+            <h2>Questions About EQ?</h2>
+            <p>Do you have further questions about headphone equalization? Fill out your name and email and I will get
+                back to you!</p>
+
+            <form method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Kevin Kotzbauer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
